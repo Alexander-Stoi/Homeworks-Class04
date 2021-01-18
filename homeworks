@@ -1,0 +1,232 @@
+
+// //Class04 Homework 01 Arrays---------------------------------------------------------------------------------------------
+
+// function tellStory(NameMoodActivity) {
+//     return `This is ${NameMoodActivity[0]}. ${NameMoodActivity[0]} is a nice person. Today he is feeling ${NameMoodActivity[1]}. He is ${NameMoodActivity[2]} all day. The End. `
+// }
+
+// let arrayNameMoodActivity = [`Aleksandar`, `Wonderful`, `Practising JavaScript`];
+// alert(tellStory(arrayNameMoodActivity));
+
+
+
+// //Class04 Homework 02 Arrays---------------------------------------------------------------------------------------------
+
+// let arrayValues = [0, 5, 6, 18, 10];
+
+// function validateNumber(value) {
+//     return Number.isInteger(value)
+// }
+
+// function varcalculateSum(values) {
+//     if (values.length != 5) {
+//         return `The array must have 5 numbers`
+//     }
+
+//     var sum = 0;
+
+//     for (var i = 0; i < values.length; i++) {
+//         if (!validateNumber(values[i])) {
+//             return `Wrong input`
+//         } else {
+//             sum += values[i];
+//         }
+
+//     }
+
+//     return sum;
+// }
+
+// console.log(varcalculateSum(arrayValues));
+
+
+
+// example 01---------------------------------------------------------------------------------
+
+// let arrayOne = [1, 2, 5, 7, 9, 2, 7, 6, 1];
+
+// function validateNumber(value) {
+//     return Number.isInteger(value)
+// }
+
+// function maxNumber(array) {
+//     if (array.length != 10) {
+//         return `Array must contain 10 numbers`
+//     }
+
+//     let max = array[0];
+
+//     for (i = 0; i < array.length; i++) {
+//         if (!validateNumber(array[i])) {
+//             return `Array must contain only integers`
+//         } else if (array[i] > max) {
+//             max = array[i];
+//         }
+//     }
+
+//     return max;
+// }
+
+// console.log(maxNumber(arrayOne));
+
+// Student Exercise-------------------------------------------------------------------------------
+
+// let num1 = 101;
+// let num2 = 150;
+
+// function returnSquares(number1, number2) {
+
+//     let sum = 0;
+
+//     for (i = number1; i <= number2; i++) {
+//         sum += Math.pow(i, 2);
+//     }
+//     return sum;
+
+// }
+
+// console.log(returnSquares(num1, num2));
+
+
+
+
+// Student Exercise #1--------------------------------------------------------------------------------
+
+// let arrayOne = [1, 5, 8, 16, 5, 5, 3, 4, 7, 2, 5, 1, 13, 1, 2, 3, 2, 5, 8];
+// let arrayTwo = [2, 4, 5, 5, 6, 7, 8, 6, 8, 9, 8, 6, 7, 4, 1, 6, 8, 9, 6, 7, 5, 6, 7, 9, 2, 4, 6, 8];
+// let arrayThree = [6, 5, 6, 7, 6, 8, 3, 2, 1, 8, 8, 6, 4, 6, 7, 9, 6, , 7, 6, 7, 3, 5, 7, 4, 6, 9, 7, 6, 4, 6, 4];
+
+// let num1 = 5;
+// let num2 = 6;
+// let num3 = 7;
+
+// function findNumber(number, array){
+//     let counter = 0;
+//     for (i = 0; i <= array.length - 1; i++){
+//         if(array[i] === number){
+//             counter++;
+//         }
+//     }
+//     return counter;
+// }
+
+// console.log(`There is ${findNumber(num1, arrayOne)} occurrences of number ${num1} in the array`);
+// console.log(`There is ${findNumber(num2, arrayTwo)} occurrences of number ${num2} in the array`);
+// console.log(`There is ${findNumber(num3, arrayThree)} occurrences of number ${num3} in the array`);
+
+
+
+// // Student Exercise #2-----------------------------------------------------------------------------------------------
+
+
+// //let arrayOne = [1, 5, 8, 16, 5, 5, 3, 4, 7, 2, 5, 1, 13, 1, 2, 3, 2, 5, 8];
+// let userInputArray1;
+// function findNumber(array, type) {
+
+//     let emptyArray = [];
+//     let j = 0;
+
+//     for (i = 0; i < array.length; i++) {
+//         var element = parseInt(array[i]);
+
+//         if (element % 2 === 0 && type === `even`) {
+//             emptyArray[j] = element;
+//             j++;
+//         }
+
+//         if (element % 2 != 0 && type === `odd`) {
+//             emptyArray[j] = element;
+//             j++;
+//         }
+
+//     }
+//     return emptyArray
+// }
+// let userInputArray = prompt(`Enter array of integers:`);
+// let userInputType = prompt(`Enter "even" or "odd":`);
+// console.log(findNumber(userInputArray.split(' '), userInputType));
+
+
+// //Homework 01--------------------------------------------------------------------------
+
+// let students = ['Hello', 'there', 'students', 'of', 'SEDC', '!'];
+
+// function returnString(array) {
+    
+//     let sentence = '';
+//     for (i = 0; i < array.length; i++) {
+//         sentence += array[i] + ' ';
+//     }
+
+//     return sentence;
+
+// }
+// console.log(returnString(students));
+
+
+
+
+
+// // Homework 02--------------------------------------------------------------------------
+
+// for (i = 1; i <= 20; i++) {
+
+//     if (i % 2 === 0) {
+//         line += i + '\n';
+//         console.log(line);
+//     } else {
+//         line = i + ' ';
+//     }
+// }
+
+
+
+
+// // Homework 03------------------------------------------------------------------------
+
+// let arrayNumbers = [undefined, 4, null, 5, '', 7, 8, 6, 8, 0, 9, `85`, 6, 7, NaN, 1, true, 8, false, isNaN, 7, 5, 6, 7, 9, 2, 4, 15, 8, 0];
+
+// function sumOfMaxAndMin(array) {
+//     let min = Infinity;
+//     let max = - Infinity;
+//     let sum = 0;
+
+//     for (let i of array) {
+
+//         if (typeof i === 'number' && !isNaN(i)) {
+
+//             if (i < min) {
+//                 min = i;
+//             } else if (i > max) {
+//                 max = i;
+//             }
+//         }
+//     }
+//     sum = min + max;
+//     return { max, min, sum };
+// }
+// console.log(sumOfMaxAndMin(arrayNumbers));
+
+
+
+
+// Homework 4--------------------------------------------------------------------------
+
+// let firstNames = [`Aleksandar`, `Zoran`, `Ceca`, `Jana`, `Martina`, `Nina`, `Leart`, `Ivan`, `Marko`, `Sinisha`];
+// let lastNames = [`Stojanov`, `Antevski`, `Vasileva`, `Simjanovska`, `Veterovska`, `Spasikj`, `Kamberi`, `Jarmandilovski`, `Tasevski`, `Bogdanovski`];
+
+// function fullName(names, surnames) {
+
+//     if (names.length !== surnames.length) {
+//         return `Length of names and surnames should be equal`
+//     }
+//     nameAndSurname = [];
+//     for (i = 0; i < names.length; i++) {
+
+//         nameAndSurname[i] = i + 1 + `.` + names[i] + ` ` + surnames[i];
+
+//     }
+
+//     return nameAndSurname;
+// }
+// console.log(fullName(firstNames, lastNames));
